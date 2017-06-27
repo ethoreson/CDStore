@@ -10,4 +10,16 @@ class CD {
     mReleaseYear = releaseYear;
     mPrice = price;
   }
+
+  public String cheapEnough(int maxPrice) {
+    return (mPrice <= maxPrice);
+  }
+
+  public String searchByArtist(String artistName) {
+    return (mArtistName = artistName);
+  }
+
+  public String searchByReleaseYear(String releaseYear) {
+    return (mReleaseYear <= releaseYear);
+  }
 }
