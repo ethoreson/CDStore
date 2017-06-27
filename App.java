@@ -57,7 +57,17 @@ public class App {
         }
       }
     } else if (navigationChoice.equals("Search by Artist")) {
-      System.out.println("Logic not yet built");
+      System.out.println("Enter an artist's name, we'll see if we've got something from them");
+      String userArtist = myConsole.readLine();
+      for (CD ep : inventory ) {
+        if (ep.searchByArtist(userArtist)) {
+          System.out.println("---------------");
+          System.out.println( ep.mArtistName );
+          System.out.println( ep.mAlbumName );
+          System.out.println( ep.mReleaseYear );
+          System.out.println( ep.mPrice );          
+        }
+      }
     } else {
       System.out.println("Logic not yet built");
     }
