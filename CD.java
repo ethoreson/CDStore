@@ -11,15 +11,15 @@ class CD {
     mPrice = price;
   }
 
-  public String cheapEnough(int maxPrice) {
+  public boolean cheapEnough(int maxPrice) {
     return (mPrice <= maxPrice);
   }
 
-  public String searchByArtist(String artistName) {
-    return (mArtistName = artistName);
+  public boolean searchByArtist(String artistName) {
+    return (mArtistName.equals(artistName));
   }
 
-  public String searchByReleaseYear(String releaseYear) {
+  public boolean searchByReleaseYear(int releaseYear) {
     return (mReleaseYear <= releaseYear);
   }
 }

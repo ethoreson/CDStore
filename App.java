@@ -14,7 +14,7 @@ public class App {
     CD taylor1 = new CD("Taylor Swift", "1989", 2014, 10);
     CD taylor2 = new CD("Taylor Swift", "Red", 2012, 8);
 
-    CD[] inventory = {gaga, gwen, chance};
+    CD[] inventory = {gaga, gwen, chance, nat, prince, taylor1, taylor2};
 
 
     System.out.println("Welcome to Emilie's CD Store.");
@@ -30,26 +30,24 @@ public class App {
         System.out.println( ep.mPrice );
       }
     } else if (navigationChoice.equals("Search by Price")) {
-        System.out.println("What is the maximum price you would pay?");
-        Integer userMaxPrice = Integer.parseInt(myConsole.readLine());
-        System.out.println("Here's what we have in your price range:");
-        for (CD ep : inventory ) {
-          if ( ep.cheapEnough(userMaxPrice)){
-            System.out.println("---------------");
-            System.out.println( ep.mArtistName );
-            System.out.println( ep.mAlbumName );
-            System.out.println( ep.mReleaseYear );
-            System.out.println( ep.mPrice );
-          }
+      System.out.println("What is the maximum price you would pay?");
+      Integer userMaxPrice = Integer.parseInt(myConsole.readLine());
+      System.out.println("Here's what we have in your price range:");
+      for (CD ep : inventory ) {
+        if ( ep.cheapEnough(userMaxPrice)){
+          System.out.println("---------------");
+          System.out.println( ep.mArtistName );
+          System.out.println( ep.mAlbumName );
+          System.out.println( ep.mReleaseYear );
+          System.out.println( ep.mPrice );
         }
-
-
+      }
     } else if (navigationChoice.equals("Search by Year")) {
-        System.out.println("Logic not yet built");
+      System.out.println("Logic not yet built");
     } else if (navigationChoice.equals("Search by Artist")) {
-        System.out.println("Logic not yet built");
+      System.out.println("Logic not yet built");
     } else {
-        System.out.println("Logic not yet built");
+      System.out.println("Logic not yet built");
     }
 
   }
