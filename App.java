@@ -43,7 +43,19 @@ public class App {
         }
       }
     } else if (navigationChoice.equals("Search by Year")) {
-      System.out.println("Logic not yet built");
+      System.out.println("What year would you like to start at?");
+      Integer userStartYear = Integer.parseInt(myConsole.readLine());
+      System.out.println("What year would you like to end at?");
+      Integer userEndYear = Integer.parseInt(myConsole.readLine());
+      for (CD ep : inventory ) {
+        if ( ep.searchByReleaseYear(userStartYear, userEndYear)){
+          System.out.println("---------------");
+          System.out.println( ep.mArtistName );
+          System.out.println( ep.mAlbumName );
+          System.out.println( ep.mReleaseYear );
+          System.out.println( ep.mPrice );
+        }
+      }
     } else if (navigationChoice.equals("Search by Artist")) {
       System.out.println("Logic not yet built");
     } else {

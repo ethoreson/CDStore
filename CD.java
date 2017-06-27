@@ -19,7 +19,7 @@ class CD {
     return (mArtistName.equals(artistName));
   }
 
-  public boolean searchByReleaseYear(int releaseYear) {
-    return (mReleaseYear <= releaseYear);
+  public boolean searchByReleaseYear(int releaseStartYear, int releaseEndYear) {
+    return ((mReleaseYear >= releaseStartYear) && (mReleaseYear <= releaseEndYear));
   }
 }
